@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import CartPage from './Components/CartPage';
 import ProductList from './Components/ProductList';
 import { useState, useEffect } from 'react';
@@ -26,9 +26,11 @@ function App() {
     <>
       {/* Navbar */}
       <nav className="navbar">
-        <h2 className="navbar-title">Kartzen</h2>
+        <div className="navbar-title-container">
+          <h2 className="navbar-title">Kartzen</h2>
+        </div>
         <button className="cart" onClick={() => setShowCart(!showCart)}>
-          🛒 Cart({cart.length})
+          🛒 Cart ({cart.length})
         </button>
       </nav>
 
@@ -39,7 +41,10 @@ function App() {
         <>
           {/* Error message if API call fails */}
           {error && <p className="error">Error: {error}</p>}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 437ea75 (fixing the navbar)
           <ProductList products={products} cart={cart} setCart={setCart} />
         </>
       )}
