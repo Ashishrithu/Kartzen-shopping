@@ -41,10 +41,6 @@ function App() {
         <>
           {/* Error message if API call fails */}
           {error && <p className="error">Error: {error}</p>}
-<<<<<<< HEAD
-
-=======
->>>>>>> 437ea75 (fixing the navbar)
           <ProductList products={products} cart={cart} setCart={setCart} />
         </>
       )}
